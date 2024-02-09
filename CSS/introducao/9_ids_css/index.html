@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/lists.css">
+        <title>Ids CSS</title>
+    </head>
+    <body>
+      <!--Classes-->
+      <p class="paragraph">Algum texto</p> 
+      <p class="paragraph">Algum texto 2</p> 
+      <p class="paragraph">Algum texto 3</p>
+      <!--id-->
+      <h1 id="exclusive-title">Este é um título com id</h1>
+
+      <!--
+      -->
+
+      <!--
+        Esses trechos foram retirados de styles.css:
+
+        h2 {
+          border-bottom: 2px solid red; /* os h2 ganham uma borda abaixo */
+        }
+
+        .titulo {
+          border-bottom: 3px solid blue;
+        }
+
+        #algum-titulo {
+           border-bottom: 4px solid green;
+        }
+
+        Abaixo, tenho múltiplas regras e ordens CSS. Além disso, tenho uma escada de regras:
+        <h2 id="algum-titulo" class="titulo">Algum texto 1</h2>
+        <h2 class="titulo">Algum texto 2</h2>
+        <h2>Algum texto 3</h2>
+
+        id="algum-titulo" tem borda verde e class="titulo" tem borda azul.
+        1)  Em <h2 id="algum-titulo" class="titulo">Algum texto 1</h2>, a borda fica verde. id sobrescreve a classe.
+        2)  Em <h2 class="titulo">Algum texto 2</h2>, a estilização de classe sobrepõe à estiização do tag selector.
+        3) Em  <h2>Algum texto 3</h2>, foi aplicada a estilização h2 {border-bottom: 2px solid red;}
+
+      -->
+
+      <h2 id="algum-titulo" class="titulo">Algum texto 1</h2>
+      <h2 class="titulo">Algum texto 2</h2>
+      <h2>Algum texto 3</h2>
+
+    </body>
+</html>
