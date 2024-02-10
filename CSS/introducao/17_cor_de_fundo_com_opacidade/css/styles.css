@@ -1,0 +1,15 @@
+/*
+     opacity com 0.2; fica quase invisível.
+     Se colocar opacity com 0.0, fica totalmente invisível
+*/
+
+.bg-opacity {
+    background-color: green;
+    opacity: 0.2;
+}
+
+.bg-opacity-2 {
+    background-color: #999;
+    color: #000;
+    opacity: 0.8;
+}

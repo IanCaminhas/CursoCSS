@@ -1,0 +1,8 @@
+/*
+     background-image é a imagem de fundo
+*/
+.bg-image {
+    background-image: url("../img/nature.jpg");
+    padding: 10px;
+    color: #FFF;
+}

@@ -1,0 +1,14 @@
+/* background-color 
+    No final: vai ter uma lista preta no fundo( background-color)
+    e a letra ficará amarela(color).
+*/
+.bg {
+    background-color: #000;
+    color: yellow
+}
+
+.bg-2 {
+    background-color: rgb(200, 20, 40);
+    color: #00eaff ;
+}
+

@@ -1,0 +1,10 @@
+/* 
+    1 - Se você não quer aplicar a opacidade para os elementos filhos, precisa utilizar o RGBA em vez de opacity.
+    2 - Alterando o valor de alpha temos a opacidade colocada apenas na cor de fundo.
+    3 - Então preservamos o conteúdo e alteramos o background.
+*/
+
+.rgba-opacity {
+    background-color: rgb(90, 120, 20, 0.2);
+    color: #000;
+}

@@ -1,0 +1,16 @@
+/* Colocando a mesma regras em duas ou mais classes: 
+.not-centered-bg,
+.centered-bg {}
+*/
+
+.not-centered-bg,
+.centered-bg {
+    height: 400px;
+    width: 400px;
+    background-image: url("../img/bridge.jpg");
+}
+
+.centered-bg {
+    background-position: center;
+    background-size: cover;
+}
