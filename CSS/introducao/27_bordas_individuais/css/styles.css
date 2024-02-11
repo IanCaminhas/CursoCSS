@@ -1,0 +1,11 @@
+.border-left {
+    border-left: 3px solid red;
+    background-color: #222;
+    padding: 25px;
+}
+/* Com double, tenho uma borda dobrada */
+.border-bottom {
+    border-bottom: 5px double #399;
+    background-color: #222;
+    padding: 20px;
+}

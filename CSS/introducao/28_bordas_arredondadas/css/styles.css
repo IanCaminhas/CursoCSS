@@ -1,0 +1,17 @@
+/*  border-radius: 15px -> isso qque dá o efeito de borda */
+
+.rounded-p {
+    border: 4px solid blue;
+    background-color: #000;
+    color: blue;
+    padding: 15px;
+    border-radius: 15px; 
+}
+
+/* Não preciso do border para aplicar o border-radius  */
+.rounded-p-2 {
+    background-color: #000;
+    color: blue;
+    padding: 15px;
+    border-radius: 25px; 
+}

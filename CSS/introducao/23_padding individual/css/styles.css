@@ -1,0 +1,14 @@
+/*
+    padding-top => padding em cima
+    padding-left => padding na esquerda
+    padding-right => padding na direita
+    padding-bottom: => padding abaixo
+*/
+.padding-individual {
+    background-color: #222;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}

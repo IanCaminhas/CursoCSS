@@ -1,0 +1,10 @@
+/* Com solid, a borda fica contínua */
+.border {
+    border: 5px solid red;
+    padding: 10px;
+}
+/* Com dotted, a borda fica pontilhada */
+.border-2 {
+    border: 2px dotted #931;
+    padding: 25px;
+}

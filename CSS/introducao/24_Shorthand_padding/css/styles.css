@@ -1,0 +1,23 @@
+
+/*
+    Aqui foi aplicado padding:
+    6px no topo.
+    12px na direita.
+    18px na parte de baixo.
+    24px na esquerda.
+*/
+
+.shortand-padding {
+    background-color: #444;
+    padding: 6px 12px 18px 24px;
+}
+ /* padding: 10px 20px é o mesmo que:
+    padding: 10px 20px 10px 20px 
+    -> 10px em cima e abaixo
+    -> 20px na esquerda e na direita
+        */
+
+.shortand-padding-2 {
+    background-color: #555;
+    padding: 10px 20px; 
+}
