@@ -1,0 +1,4 @@
+/* Vai dar um espaçamento de 5px de distância em cada letra */
+.spacing {
+    letter-spacing: 5px;
+}
