@@ -1,0 +1,19 @@
+.absolute {
+    position: absolute;
+    background-color: #964;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    top: 2px;
+    right: 2px;
+}
+
+.absolute-2 {
+    position: absolute;
+    background-color: #964;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    top: 2px;
+    left: 2px;
+}
