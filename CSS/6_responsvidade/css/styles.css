@@ -1,0 +1,57 @@
+/* 2 - Media query */
+
+h1 {
+    color: red;
+}
+/* Quando o usuário estiver numa tela com menos de 500px, 
+vou aplicar regras específicas.
+Esses regras, geralmente, envolvem elementos html.
+No exemplo abaixo: quando estiver numa tela com menos de 500px, 
+vou ter uma cor de texto azul.
+Uso screen para especificar quando o usuário estiver numa tela. Isso é importante, 
+pois o screen pode significar a impressão de alguma coisa.
+and é uma condicional.
+Quando tiver numa tela(screen) e for menor ou igual a 500px, vou aplicar regras específicas.
+
+ */
+@media screen and (max-width: 500px) {
+    h1 {
+        color: blue;
+    }
+}
+
+p {
+    background-color: red;
+    color: #000;
+}
+
+/* 
+
+*/
+
+
+/* 3 - min - width 
+Quando tiver numa tela maior ou igual a 800px, 
+vou aplicar as regras especificadas.
+*/
+@media screen and (min-width: 800px) {
+    p {
+        background-color: #789;
+        color: red;
+    }
+}
+
+/* Landscape */
+h3 {
+    display: none;
+}
+/* Posso ainda concatenar mais regras.
+O landscape só vai funcionar no máximo em telas de 500px. Como fica ?
+@media screen and (orientation: landscape) and (max-width: 500px)
+*/
+
+@media screen and (orientation: landscape) {
+    h3 {
+        display: block;
+    }
+}
