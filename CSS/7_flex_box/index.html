@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Flexbox</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- 1 - Flex 
+        O paragraph(<p>) é elemento de block por padrão.
+        Colocando o display: flex lá no css, os elementos se comportam "parecido" com os elementos inline.
+        Esse comportamento inline do flex é chamado de row.
+        Portanto, o comportamento padrão do flex é row.
+        Em suma, mudou o comportammento de display dos elementos(um do lado outro).
+        -->
+        <div class="flex">
+            <p>Meu</p>
+            <p>Primeiro</p>
+            <p>Elemento</p>
+            <p>Com flex</p>
+        </div>
+        
+        <!-- 2 -column 
+            O comportamento padrão do span é inline.
+            Colocando display: flex, os elementos ainda ficarão em linha(row)
+            Para exibir como elemento de bloco, preciso dizer: flex-direction: column
+        -->
+        <div class="flex-column">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+
+        <!-- 3 -wrap 
+            Por padrão, os 9 boxes ficarão um do lado 
+            do outro. Para deixar 3 do lado do outro preciso
+            colocar: 
+            width: 33%, ou seja, a divisão de uma linha por três e:
+            flex-wrap: wrap; para deixar de ser row e ir para block
+
+        -->
+        <div class="wrap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 4 - Justify content 
+        Deixa todos os elementos juntos no centro
+        -->
+        <h2>Center</h2>
+        <div class="center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- Coloco um espaçamento igual entre os elementos.
+        No começo e no fim também tem um respiro -->
+
+        <h2>Space Around</h2>
+        <div class="space-around">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!--Coloco um espaçamento igual entre os elementos.
+        No começo e no fim também não respiro igual no .space-around-->
+        <h2>Space Between</h2>
+        <div class="space-between">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- Vai inverter a ordem. Se estiver no começo, vai para o final.
+        Se tiver no final, vai para o começo-->
+        <h2>End</h2>
+        <div class="end">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 5 - align items -->
+
+        <h2>Center</h2>
+        <div class="align-center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!---->
+        <h2>End</h2>
+        <div class="flex-end">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!--Stretch é alongamento. Vai esticar até o final da área. 
+        É perceptível que vai alongar até o fim da borda-->
+        <h2>Stretch</h2>
+        <div class="stretch">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 6 -gap 
+        Ficou um pequeno espaço entre as margens laterais. Por quê ?
+        .gap .box {
+            width: 32%;
+        }
+        O largura das box é 32%. Aí a soma resulta 96%.
+        As outras 3 box, vai cair para a próxima linha
+        -->
+        <div class="gap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 7 - order 
+        Por padrão, vai ficar em block(pilha). Vai ficar 3 no topo, 2 no meio e 1 no fim.
+        Lá no arquivo css, eu coloco order em cada id(id="one", id="two", id="three").
+        No final, vai ficar todos um do lado do outro conforme o atributo order do css.
+        -->
+        <h2>Order</h2>
+        <div class="order">
+            <div class="box" id="three">3</div>
+            <div class="box" id="one">2</div>
+            <div class="box" id="two">1</div>
+        </div>
+
+    </body>
+</html>

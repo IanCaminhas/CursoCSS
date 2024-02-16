@@ -1,0 +1,155 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* 1 -flex */
+.flex {
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* 2 - flex column */
+.flex-column {
+    display: flex;
+    background-color: #ccc;
+    flex-direction: column;
+}
+
+/* 3 -wrap */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 40px;
+    width: 33%;
+    border: 1px solid red;
+}
+
+/* 4 - Justify content */
+.center,
+.space-around,
+.space-between,
+.end {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.center .box,
+.space-around .box,
+.space-between .box,
+.end .box {
+   width: 50px; 
+}
+/*  Deixa todos os elementos juntos no centro */
+.center {
+    justify-content: center;
+}
+
+/* Coloco um espaçamento igual entre os elementos.
+No começo e no fim também tem um respiro */
+.space-around {
+    justify-content: space-around;
+}
+
+/* Coloco um espaçamento igual entre os elementos.
+No começo e no fim também não respiro igual no .space-around */
+.space-between {
+    justify-content: space-between;
+}
+
+/* Vai inverter a ordem. Se estiver no começo, vai para o final.
+Se tiver no final, vai para o começo */
+.end {
+    justify-content: end;
+}
+
+/* 5 - Align items */
+.align-center,
+.flex-end,
+.stretch {
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.align-center .box,
+.flex-end .box,
+.stretch .box {
+   width: 50px; 
+}
+
+.align-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+/* Esse auto vai estica tudo até o final */
+.stretch .box {
+    height: auto;
+}
+
+/* 6 - gap */
+.gap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid green;
+    gap: 10px;
+}
+
+.gap .box {
+    width: 32%;
+}
+
+/* Order 
+Quanto menor a order, mais o elemento ficará na frente ou no topo.
+Ao invés de 1-2-3, posso colocar 10, 100, 1000, 10000, 20, 200, 2000, 20000, 
+30, 300, 3000, 30000, etc.
+Esses valores vão ser colocados em ordem crescente.
+Muita gente usa esses valores grandes, mas o certo conceitualmente é usar 1-2-3
+*/
+
+#order {
+    order: 1;
+}
+
+#two {
+    order: 2;
+}
+
+#three {
+    order: 3;
+}
+
+/*
+Lá no HTML, vai ser na ordem em row: #order, #two e #three.
+Se fosse em block:
+1 - #order
+2 - #two
+3 - #three
+
+#order {
+    order: 10000;
+}
+
+#two {
+    order: 20000;
+}
+
+#three {
+    order: 30000;
+}
+*/
