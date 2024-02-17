@@ -146,5 +146,70 @@
             <div class="box" id="two">1</div>
         </div>
 
+        <!-- 8 - grow 
+         <div class="box big"></div> vai ter o dobro de tamanho dos demais devido ao css 
+         declarado:
+        .grow .big {
+            flex: 2;
+        }
+        O valor padrão flex é 1. Quando coloco o valor 2 para o flex, o elemento que possui a classe
+        terá o dobro de tamanho dos demais.
+        -->
+        <h2>Grow</h2>
+        <div class="grow">
+            <div class="box"></div>
+            <div class="box big"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 9 - basis 
+        Com <div class="box"></div>, um elemento vai ocupar 20px:
+        .basis .box {
+            flex-basis: 20px;
+        }
+
+        Com <div class="box big"></div>, o elemento vai ocupar o restante da largura:
+        .basis .big {
+            flex-grow: 1;
+        }
+        -->
+        <h2>Basis</h2>
+        <div class="basis">
+            <div class="box"></div>
+            <div class="box big"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 10 - Shrink 
+        flex-shrink igual a 1, os elementos de menor relevância vão sendo exibidos.
+        Em suma, o elemento com shrink vai diminur mais em relação aos outros elementos.
+        -->
+        <h2>Shrink</h2>
+        <div class="shrink">
+            <div class="box"></div>
+            <div class="box small"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 11 - flex shorthand é uma forma curta para 
+        expressar em sequência: grow, shrink e basis.
+        -->
+        <h2>Shorthand</h2>
+        <div class="shorthand">
+            <div class="box"></div>
+            <div class="box different"></div>
+            <div class="box"></div>
+        </div>
+
+        <!-- 12 - auto alinhamento 
+        A regra align-self alinha um elemento diferente dos demais. Podemos centralizar um elemento 
+        enquanto os outros seguem a regra de alinhamento do container.
+        -->
+        <h2>Auto alinhamento</h2>
+        <div class="auto-alignment">
+            <div class="box"></div>
+            <div class="box different"></div>
+            <div class="box"></div>
+        </div>
     </body>
 </html>

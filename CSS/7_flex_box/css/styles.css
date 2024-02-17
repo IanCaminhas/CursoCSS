@@ -114,7 +114,7 @@ Se tiver no final, vai para o começo */
     width: 32%;
 }
 
-/* Order 
+/* 7 - Order 
 Quanto menor a order, mais o elemento ficará na frente ou no topo.
 Ao invés de 1-2-3, posso colocar 10, 100, 1000, 10000, 20, 200, 2000, 20000, 
 30, 300, 3000, 30000, etc.
@@ -153,3 +153,90 @@ Se fosse em block:
     order: 30000;
 }
 */
+
+/* 8 - Grow
+O valor padrão flex é 1. 
+Quando coloco o valor 2 para o flex, o elemento que possui a classe
+terá o dobro de tamanho dos demais.
+*/
+.grow {
+    display: flex;
+}
+
+.grow .box {
+    flex: 1;
+}
+
+.grow .big {
+    flex: 2;
+}
+
+/* 9 - Basis
+Com flex-basis com valor 20px, um elemento vai ocupar 20px.
+Com flex-grow com valor 1, o elemento vai ocupar o restante da largura.
+*/
+.basis {
+    display: flex;
+}
+
+.basis .box {
+    flex-basis: 20px;
+}
+
+.basis .big {
+    flex-grow: 1;
+}
+
+/* Shrink 
+flex-shrink igual a 1, os elementos de menor relevância vão sendo exibidos.
+*/
+.shrink {
+    display: flex;
+}
+
+.shrink .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+}
+
+.shrink .small {
+    flex-shrink: 2;
+}
+
+/* 11 - flex shorthand é uma forma curta para expressar em sequência: grow, shrink e basis
+flex: 1 1 50px;
+flex: 3 1 400px;
+Portanto,
+1 é grow, 1 é shrink e 50px é basis.
+3 é grow, 1 é shrink e 400px é basis.
+
+*/
+.shorthand {
+    display: flex;
+}
+
+.shorthand .box {
+    width: auto;
+    flex: 1 1 50px;
+}
+
+.shorthand .different {
+    flex: 3 1 400px;
+}
+
+/* 12 auto-alignment 
+1 - A regra align-self alinha um elemento diferente dos demais.
+2 - Podemos centralizar um elemento enquanto os outros seguem a regra de alinhamento do container.
+*/
+.auto-alignment {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid purple;
+}
+
+.auto-alignment .different {
+    align-self: center;
+}
