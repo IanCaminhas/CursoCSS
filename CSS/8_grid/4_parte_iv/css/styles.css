@@ -1,0 +1,60 @@
+/*
+grid-template-columns: auto auto auto ; Vai dividir a largura em 3 colunas.
+
+*/
+
+.container {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+
+.container div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+/* 
+Ao definir no grid-template-columns: auto auto auto, defino 3 colunas.
+Com essas regras, consigo falar onde cada item começa e termina.
+#item-1 vao ocupar 100%, pois começa do começo(grid-column-start: 1) e vai
+até o final 4(100%).
+*/
+#item-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/*
+      grid-column-start => preciso fala que começa da linha 2,
+      pois o #item-1 já está na linha 1(grid-column-start: 1).
+ */
+
+#item-2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* é o irmão do justify-self. justify-self alinha verical.
+Para conhecer mais opões do justify-self, basta dar um crl+enter  */
+#item-3 {
+    justify-self: end;
+    height: 200px;
+}
+
+#item-5 {
+    justify-self: start;
+    height: 200px;
+}
+
+/*  align-self é o alinhamento vertical individual */
+#item-4 {
+    align-self: center;
+}
+/*  align-self é o alinhamento vertical individual */
+#item-6 {
+    align-self: end;
+}

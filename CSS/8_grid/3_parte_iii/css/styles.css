@@ -1,0 +1,31 @@
+/* Alinhamento no grid */
+
+/* vai alinhar os itens na horizontal:
+justify-content: center. Se eu der um ctrl+enter vai ter outras opções além do center.
+justify-content pode ter start(ir para a esquerda), end(ir para a direita).
+
+Vai lainhar na vertical:
+align-items: start;
+align-items pode ter center, end.
+
+Quando uso o alinhamento na vertical, vai existir um espaçamento
+entre as linhas. Para diminuir esse espaçamento, basta ajustar o height
+.container. O height está 40vh.
+*/
+
+.container {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}

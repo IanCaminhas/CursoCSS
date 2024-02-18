@@ -1,0 +1,45 @@
+/*
+grid-template-columns: 50px auto 10%;
+Dividi em 3 colunas:
+50px de largura vai ter a primeira coluna.
+10% de lagura vai ter a terceira coluna.
+auto: O que sobrar de área entre a primeira e a terceira colunas, 
+realizar todo o preenchimento.
+
+Posso colocar 4 colunas:
+grid-template-columns: 50px auto 10% 100px;
+
+grid-template-rows: 70% 30%;
+Aqui faço a largura das linhas.
+A primeira linha vai ocupar 70%.
+A segunda coluna vai ocupar 30%.
+
+gap: 5px;
+É o espaçamento entre os elementos em relação a todos os lados.
+Existem outras formas de dar gap:
+    grid-row-gap: 10px; espaçamento individual para as linhas
+    grid-column-gap: 15px; Espaçamento individual para as colunas 
+    Esses exemplos de cima estão em .container{}
+
+Mas o mais usual é apenas usar o gap. Ou seja, espaçamento igual entre
+todos os elementos.
+
+*/
+
+.container {
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50px auto 10%;
+    height: 40vh; /* Isso é para o elemento pai(container) ganhar uma certa altura*/
+    grid-template-rows: 70% 30%;
+    grid-row-gap: 10px; /* espaçamento entre as linhas*/
+    grid-column-gap: 15px; /* Espaçamento entre as colunas */
+}
+
+.container div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
