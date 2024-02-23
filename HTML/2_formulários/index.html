@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2>Formulários HTML</h2>
+     <!-- Atributos da tag form 
+        register.php não existe
+    -->
+    <form action="/register.php" method="POST">
+        <div>
+            <!-- 
+                Posso separar com divs também!!!
+                label é o rótulo do input, ou seja, é uma descrição que orienta o 
+                usuário no momento de inserir o dado no input.
+                Com essa div, realizo as estilizações!!! 
+            -->
+            <label>Nome:</label>
+            <input type="text" />
+        </div>
+
+        <!-- Atributo name -->
+        <div>
+            <label>Idade:</label>
+            <input type="text" name="idade">
+        </div>
+
+        <!-- Atributo label 
+            Portanto: o input e a label estão ligados pelo for.
+        -->
+        <div>
+            <label for="apelido">Apelido:</label>
+            <input type="text" name="apelido">
+        </div>
+
+        <div>
+            <label for="job">Selecione a sua profissão:</label>
+            <!-- Esse atributo name deve ser igual a do for(o for que está na label) -->
+            <select name="job" id="">
+                <option value="programador">Programador</option>
+                <option value="tester">Tester/QA</option>
+                <option value="devops">DevOps</option>
+            </select>
+        </div>
+
+        <!-- Atributo selected
+            Por padrão, a opção não virá pré-selecioada
+        -->
+        <div>
+            <!-- O atributo for deve ter o mesmo valor do atributo name(está em select) -->
+            <label for="contract">Você leu os termos do contrato ?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <!-- Por padrão, o não virá selecionado -->
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+
+        <!-- Múltiplas opções -->
+        <div>
+            <!-- O atributo for deve ter o mesmo valor do atributo name(está em select) -->
+            <label for="items">Selecione os itens desejados:</label>
+            <select name="items" multiple>
+                <option value="melancia">Melancia</option>
+                <option value="feijao">Feijão</option>
+                <option value="arroz">Arroz</option>
+                <option value="laranja">Laranja</option>
+            </select>
+        </div>
+
+        <!-- textarea -->
+        <div>
+            <!-- O atributo for deve ter o mesmo valor do atributo name(está em textarea) -->
+            <label for="comment">Escreva abaixo o que você achou do post:</label>
+            <!-- cols e rows vão determinar o tamanho do campo de texto -->
+            <textarea name="comment" cols="100" rows="10"></textarea>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Preencha as suas informações:</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname">
+                <label for="lastname">Sobrenome:</label>
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+
+        <!-- datalist 
+            O que faz o link entre o input e o datalist são:
+            o id que fica em datalist e o atributo list que 
+            fica em input.
+            Na option, não preciso colocar o texto igual no select.
+            O valor que está em option value será exibido.
+            Posso digitar que algo será sugerido para seleção.
+        -->
+        <div>
+            <label for="flavor">Escolha o sabor:</label>
+            <input type="text" list="flavors" name="flavor" />
+            <datalist id="flavors">
+                <option value="Botafogo"></option>
+                <option value="Bangu"></option>
+                <option value="Flamengo"></option>
+                <option value="Macae"></option>
+            </datalist>
+        </div>
+
+        <!-- Senha 
+        O asterico é apenas um efeito de máscara. 
+        O que será enviado para o servidor, de fato, será a senha.
+        -->
+        <div>
+            <label for="password">Digite a sua senha:</label>
+            <input type="password" name="password" />
+        </div>
+
+        <!-- radio button 
+        Por padrão, o label e o input são block(elementos de bloco).
+        Transformei esses elementos para inline(olhe lá no arquivo .css):
+        .radio label,
+        .radio input {
+            display: inline-block;
+        }
+        -->
+        <div>
+            <label for="car_model">Escolha o modelo do seu carro:</label>
+            <div class="radio">
+                <input type="radio" value="fusca" name="car_model" />
+                <!-- O for se relaciona com o value="fusca" -->
+                <label for="fusca">Fusca</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="palio" name="car_model" />
+                <label for="palio">Palio</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="fiat 147" name="car_model" />
+                <label for="fiat 147">Fiat 147</label>
+            </div>
+        </div>
+
+        <!-- checkbox 
+            Se eu quiser enviar mais de uma opção para o servidor, preciso colocar
+            a abertura e fechamento de colchetes em cada name(fica dentro do input).
+
+            Por padrão, o label e o input são block(elementos de bloco).
+            Transformei esses elementos para inline(olhe lá no arquivo .css):
+            .combo label,
+            .combo input {
+                display: inline-block;
+            }
+        -->
+        <div>
+            <label for="optionals">Opções de cores:</label>
+            <div class="combo">
+                <!-- O valor da name é igual ao for(dentro de label) -->
+                <input type="checkbox" name="optionals[]" value="red">
+                <!-- O valor desse for é igual ao value(input) -->
+                <label for="red">Vermelho</label>
+            </div>
+            <div class="combo">
+                <input type="checkbox" name="optionals[]" value="green">
+                <label for="green">Verde</label>
+            </div>
+            <div class="combo">
+                <input type="checkbox" name="optionals[]" value="pink">
+                <label for="pink">Rosa</label>
+            </div>
+        </div>
+
+        <!-- datas -->
+        <div>
+            <!-- Esse for deve ser igual ao name(input) -->
+            <label for="birthday">Data de nascimento:</label>
+            <input type="date" name="birthday">
+        </div>
+
+        <!-- arquivos
+            O input do tipo file não possui value. Assim, não consigo alterar o nome do "botão" 
+            para incluir o arquivo.
+        -->
+        <div>
+            <label for="image">Insira a sua imagem:</label>
+            <input type="file" name="image">
+        </div>
+
+        <!-- numeros -->
+        <div>
+            <!-- for é igual ao name(input) -->
+            <label for="salary">Quanto você ganha no seu emprego atual ?</label>
+            <input type="number" name="salary">
+        </div>
+
+        <!-- emails -->
+        <div>
+            <!-- O for deve ser igual ao name(input) -->
+            <label for="email">Digite o seu email:</label>7
+            <!-- o type pode ser igual ao name -->
+            <input type="email" name="email">
+        </div>
+
+        <!-- Value
+            O campo já vem preenchido
+        -->
+        <div>
+            <!-- O for deve ser igual ao name(input) -->
+            <label for="value">Digite algum valor:</label>
+            <input type="text" value="O meu é este" name="value">
+        </div>
+
+        <!-- disabled -->
+        <div>
+            <p>Tente mudar o valor:</p>
+            <input type="text" value="Não precisa preencher" disabled>
+        </div>
+
+        <!-- placeholder -->
+        <div>
+            <label for="currentjob">Digite a sua profissão:</label>
+            <input type="text" name="currentjob" placeholder="No que você está trabalhando agora ?">
+        </div>
+
+        <!-- required 
+            Com esse atributo, eu não consigo submeter o formulário.
+        -->
+        <div>
+            <label for="birthyear">Ano nascimento:</label>
+            <input type="text" placeholder="Digite o ano em que você nasceu" required>
+        </div>
+
+        <!-- resetar form 
+            value="Resetar" => vai ser o nome do botão lá na página
+            Reiniciar o form é limpar(deixar vazio) os campos do formulário.
+            Se eu não colocar nada no value, o botão terá o nome repor
+        -->
+        <input type="reset" value="Limpar">
+        
+        <!-- Envio de form 
+        value é texto do input(botão).
+        Se eu não colocar nada para o value, o value será Enviar(value="Enviar")
+        O value tem que ser algo que remeta o formulário: Cadastrar, enviar, etc...
+        Quando clico nesse botão, o formulário dá um reload na página e tenta 
+        achar o arquivo ou página register.php
+        -->
+        <input type="submit" value="Enviar para o curso" />
+    </form>
+
+</body>
+</html>

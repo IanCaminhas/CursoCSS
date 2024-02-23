@@ -1,0 +1,23 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* Para afastar um input do outro */
+div {
+    margin-bottom: 10px;
+}
+
+div input,
+div label {
+    display: block;
+}
+
+.radio label,
+.radio input {
+    display: inline-block;
+}
+
+.combo label,
+.combo input {
+    display: inline-block;
+}
