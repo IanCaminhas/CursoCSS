@@ -1,0 +1,190 @@
+/* reset. O que é isso ?
+É a eliminação de estilos base(do HTML e do navegador) 
+para eu trabalhar com os estilos do projeto.
+Seletor de *: significa que vou selecionar todos os elementos.
+
+margin: 0;
+padding: 0;
+Signfica que vou tirar a margem e o padding. O que acontece ? todos os elementos ficam no canto esquerdo.
+Aí poderei controlar todos os elementos da forma que eu quiser.
+Quando o navegador não suportar Arial vai ser Helvetica. Se não suportar as duas, será sans-serif.
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0ebf8;
+}
+
+/* A intenção aqui é padronizar a cor de todos os títulos 
+Dica: dificilmente usamos preto(#000) ou branco(#FFF).
+Trabalhamos com as variações próximas a esses cores. 
+Isso é para melhorar a visualização nas telas, ou seja, para a cor não ficar tão marcante.
+*/
+h1, h2, h3, h4, h5 {
+    color: #333;
+}
+
+/* O objetivo aqui é deixar o conetúdo das labels e dos parágrafos mais claros que os títulos  */
+p,
+label {
+    color: #444;
+}
+
+/* Preciso tirar todas as bordas dos inputs, porque só desejo bordas embaixo.
+Para tirar todas as bordas uso:  border: none;
+Para colocar a borda embaixo, basta: border-bottom: 1px solid #ccc;
+padronizei a largura dos inputs em 400px(width)
+*/
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* Eu não quero padronizar a largura de todos os inputs. 
+Quero especificar os inputs que desejo padronizar a largura.
+No caso, só vou padronizar os inputs do tipo text, number, date, file e textarea
+*/
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+textarea
+{
+    width: 400px;
+}
+
+textarea {
+    padding: 10px 5px;
+}
+
+/* page header */
+.header {
+    height: 160px;
+    padding: 20px;
+    background-color: #673ab7;
+}
+
+/* Retirando a margem do topo:
+    margin-top: 0;
+*/
+.header h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+/* form container 
+
+    width: 60% vai ocupar 60% da largura.
+    position: relative é em referência ao elemento de cima.
+    Por isso que colocando -62px, vai ultrapassar o header um pouco.
+
+    margin: 0 auto; é uma forma de centralizar na tela
+
+*/
+.form-container {
+    background-color: #fdfdfd;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: -62px;
+}
+
+/* form header */
+
+.form-header {
+    border-bottom: 1px solid #DFDFDF;
+    height: 45px;
+}
+
+.form-header p {
+    color: #673ab7;
+    border-bottom: 2px solid #673ab7;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+}
+
+/* Para não deixar o quadro(parte branca com o formulário) próximo às extremidades */
+.form-body {
+    padding: 30px;
+}
+
+/* Afastar os elementos abaixo do seguinte título em 15px: Venda fácil seu carro! */
+.form-title {
+    margin-bottom: 15px;
+}
+
+.form-body p {
+    margin-bottom: 20px;
+}
+
+/* Deixar o asterico de obrigatório em vermelho */
+.required-field {
+    color: #d80835;
+}
+
+/* Afastando um input do outro */
+.box-input {
+    margin-bottom: 35px;
+}
+
+/* Para fazer com que os elementos inline fiquem display block */
+.block {
+    display: block;
+}
+
+/* Os checkbox e os radio são elementos de block. Quero que eles fiquem inline */
+.optional-box {
+    display: inline-block;
+    margin: 0 30px 30px 0;
+}
+
+/* para retirar os bullets que ficam ao lado dos checkbox */
+.optional-list li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.box-input p {
+    margin-bottom: 15px;
+}
+
+/* 
+cursor: pointer; => Para a seta mouse de formato ao passar o mouse sobre o botão.
+
+text-transform: uppercase; => Para deixar o texto do botão em letra maiúscula.
+
+transition: 0.5s; => vai ser a duração até ocorrer o efeito(vai demorar 0,5s até ocorrer o efeito de transição). 
+Para isso, preciso constituir essa transição.
+
+Para a constituição dessa transição, devo fazer outro efeito css em: .btn-submit:hover
+Em suma, ao passar o mouse... um negócio diferente no botão vai acontecer e vai ficar em outra forma. 
+Esse negócio diferente está em .btn-submit:hover
+
+*/
+.btn-submit {
+    background-color: #673ab7;
+    color: #fff;
+    border: 2px solid transparent;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn-submit:hover {
+background-color: #fff;
+border-color: #673ab7;
+color: #673ab7;
+}
